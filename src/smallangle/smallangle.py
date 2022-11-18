@@ -6,6 +6,8 @@ import pandas as pd
 # Making command group
 @click.group()
 def cmd_group():
+    """creating a command group were you can add subcommands.
+    """    
     pass
 
 # creating subcommand with optional amount of steps
@@ -22,7 +24,7 @@ def sin(count):
     """Making a sine function that runs from 0 till 2pi. Then making a dataframe of the input and output and printing that.
 
     Args:
-        count (string): number of steps between 0 and 2pi
+        count (int): number of steps between 0 and 2pi
     """
     x = np.linspace(0, 2 * pi, count)
     df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
@@ -44,7 +46,7 @@ def tan(count):
     """Making a tangent function that runs from 0 till 2pi. Then making a dataframe of the input and output and printing that.
 
     Args:
-        count (string): number of steps between 0 and 2pi
+        count (int): number of steps between 0 and 2pi
     """    
     x = np.linspace(0, 2 * pi, count)
     df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
