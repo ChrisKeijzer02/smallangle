@@ -11,7 +11,7 @@ def cmd_group():
 # creating subcommand with optional amount of steps
 @cmd_group.command()
 @click.option(
-"-c",
+"-n",
 "--count",
 default=10,
 help="Number of times to print greeting.",
